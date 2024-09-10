@@ -1,0 +1,30 @@
+Character Model (class)
+
+    -> id (int/string)
+
+    -> name (string)
+
+    -> stogan (string)
+
+    -> isFav (boolean)
+
+    -> stats (mixin) 
+        -> health (int)
+        -> attack (int)
+        -> defence (int)
+        -> skill (int)
+        -> points (int)
+
+    -> vocation (enhanced enum) // enum caries values.
+        -> image (string)
+        -> title (string)
+        -> description (string)
+        -> ability (string)
+        -> weapen (string)
+
+    -> skills (set of type skills (class))
+        -> id (int/string)
+        -> name (string)
+        -> image (string)
+        -> description (string) // may not have description for skills.
+        -> vocation (vocation - associated vocation for skill)
