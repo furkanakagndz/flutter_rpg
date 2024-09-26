@@ -7,6 +7,7 @@ import 'package:flutter_rpg/shared/styled_text.dart';
 import 'package:flutter_rpg/theme.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:uuid/uuid.dart';
+import 'package:flutter_rpg/screens/home/home.dart';
 
 var uuid = const Uuid();
 
@@ -41,11 +42,44 @@ class _CreateState extends State<Create> {
   // submit handler
   void handleSubmit() {
     if (_nameController.text.trim().isEmpty) {
-      // show error dialog
+      showDialog(
+          context: context,
+          builder: (ctx) {
+            return AlertDialog(
+              title: const StyledHeading('Missing Character Name'),
+              content: const StyledText(
+                  'Every good rpg character needs a great name...'),
+              actions: [
+                StyledButton(
+                    onPressed: () {
+                      Navigator.pop(ctx);
+                    },
+                    child: const StyledHeading('close'))
+              ],
+              actionsAlignment: MainAxisAlignment.center,
+            );
+          });
+
       return;
     }
     if (_sloganController.text.trim().isEmpty) {
-      // show error dialog
+      showDialog(
+          context: context,
+          builder: (ctx) {
+            return AlertDialog(
+              title: const StyledHeading('Missing Slogan'),
+              content: const StyledText('Remember to add catchy slogan...'),
+              actions: [
+                StyledButton(
+                    onPressed: () {
+                      Navigator.pop(ctx);
+                    },
+                    child: const StyledHeading('close'))
+              ],
+              actionsAlignment: MainAxisAlignment.center,
+            );
+          });
+
       return;
     }
 
@@ -55,6 +89,8 @@ class _CreateState extends State<Create> {
       id: uuid.v4(),
       vocation: selectedVocation,
     ));
+
+    Navigator.push(context, MaterialPageRoute(builder: (ctx) => const Home()));
   }
 
   @override
@@ -157,8 +193,8 @@ class _CreateState extends State<Create> {
                 // submit button
                 Center(
                   child: StyledButton(
-                      onPressed: () {},
-                      child: const StyledText('Create Character')),
+                      onPressed: handleSubmit,
+                      child: const StyledHeading('Create Character')),
                 )
               ],
             ),
