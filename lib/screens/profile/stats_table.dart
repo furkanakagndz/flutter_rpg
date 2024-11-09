@@ -30,7 +30,7 @@ class _StatsTableState extends State<StatsTable> {
                   color:
                       widget.character.points > 0 ? Colors.yellow : Colors.grey,
                 ),
-                SizedBox(width: 20),
+                const SizedBox(width: 20),
                 const StyledText('Stat points available: '),
                 const Expanded(child: SizedBox()),
                 StyledHeading(widget.character.points.toString()),
