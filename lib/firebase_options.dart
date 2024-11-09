@@ -51,7 +51,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyCBUwygJV5SgBViUN4uw3uS9iuz90iyf4A',
-    appId: '1:348850853803:android:af067ac8f3102d9592e4ee',
+    appId: '1:348850853803:android:a0e7aaecc14b13fc92e4ee',
     messagingSenderId: '348850853803',
     projectId: 'flutterrpg-2eea8',
     storageBucket: 'flutterrpg-2eea8.firebasestorage.app',
@@ -65,4 +65,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'flutterrpg-2eea8.firebasestorage.app',
     iosBundleId: 'com.example.flutterRpg',
   );
+
 }

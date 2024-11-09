@@ -4,7 +4,7 @@
             "android": {
                 "default": {
                     "projectId": "flutterrpg-2eea8",
-                    "appId": "1:348850853803:android:af067ac8f3102d9592e4ee",
+                    "appId": "1:348850853803:android:a0e7aaecc14b13fc92e4ee",
                     "fileOutput": "android/app/google-services.json"
                 }
             },
@@ -20,7 +20,7 @@
                 "lib/firebase_options.dart": {
                     "projectId": "flutterrpg-2eea8",
                     "configurations": {
-                        "android": "1:348850853803:android:af067ac8f3102d9592e4ee",
+                        "android": "1:348850853803:android:a0e7aaecc14b13fc92e4ee",
                         "ios": "1:348850853803:ios:0542868c4cbfa4ae92e4ee"
                     }
                 }

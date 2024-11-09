@@ -7,9 +7,28 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:348850853803:android:a0e7aaecc14b13fc92e4ee",
+        "android_client_info": {
+          "package_name": "com.example.flutter_rpg"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBUwygJV5SgBViUN4uw3uS9iuz90iyf4A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:348850853803:android:af067ac8f3102d9592e4ee",
         "android_client_info": {
-          "package_name": "com.example.flutterRpg"
+          "package_name": "com.example.flutter_rpg"
         }
       },
       "oauth_client": [],
