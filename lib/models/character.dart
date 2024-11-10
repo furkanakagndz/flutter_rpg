@@ -76,7 +76,7 @@ class Character with Stats {
     // assign stats & points
     character.setStats(
       points: data['points'],
-      stats: data['stats'],
+      stats: Map<String, int>.from(data['stats']),
     );
 
     return character;
