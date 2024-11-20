@@ -29,10 +29,13 @@ class Profile extends StatelessWidget {
               color: AppColors.secondaryColor.withOpacity(0.3),
               child: Row(
                 children: [
-                  Image.asset(
-                      'assets/img/vocations/${character.vocation.image}',
-                      width: 140,
-                      height: 140),
+                  Hero(
+                    tag: character.id.toString(),
+                    child: Image.asset(
+                        'assets/img/vocations/${character.vocation.image}',
+                        width: 140,
+                        height: 140),
+                  ),
                   const SizedBox(width: 20),
                   Expanded(
                     child: Column(
@@ -90,13 +93,13 @@ class Profile extends StatelessWidget {
                 onPressed: () {
                   Provider.of<CharacterStore>(context, listen: false)
                       .saveCharacter(character);
-                      
+
                   ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                      content: const StyledHeading('Character was saved'),
-                      showCloseIcon: true,
-                      duration: const Duration(seconds: 2),
-                      backgroundColor: AppColors.secondaryColor,
-                      ));
+                    content: const StyledHeading('Character was saved'),
+                    showCloseIcon: true,
+                    duration: const Duration(seconds: 2),
+                    backgroundColor: AppColors.secondaryColor,
+                  ));
                 },
                 child: const StyledHeading('Save Character')),
             const SizedBox(height: 20)
